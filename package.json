@@ -5,9 +5,8 @@
   "homepage": "https://pravdomil.com",
   "keywords": [],
   "scripts": {
-    "build": "gatsby build && node bin/readmegen",
     "start": "gatsby develop",
-    "ci": "bin/ci"
+    "build": "gatsby build"
   },
   "dependencies": {
     "bootstrap": "^4.0.0",
@@ -19,10 +18,6 @@
     "react": "^16.2.0",
     "react-helmet": "^5.2.0",
     "rembased": "github:pravdomil/rembased"
-  },
-  "devDependencies": {
-    "gh-pages": "^1.1.0",
-    "glob": "^7.1.2"
   },
   "repository": {
     "type": "git",
