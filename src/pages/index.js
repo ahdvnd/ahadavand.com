@@ -1,46 +1,31 @@
 import React from "react"
-import RepoList from "../components/RepoList"
+import { graphql } from "gatsby"
+import Resume from "../components/Resume"
+import Layout from "../components/Layout"
 
 export default function({ data }) {
-  let repos
-  try {
-    repos = data.githubData.data.viewer.repositories.nodes
-  } catch (e) {
-    throw new Error("No data from GitHub")
-  }
+  const resume = data.allMarkdownRemark.group
 
-  return <RepoList repos={repos} />
+  return (
+    <Layout>
+      <Resume resume={resume} />
+    </Layout>
+  )
 }
 
 export const query = graphql`
-  query Repos {
-    githubData {
-      data {
-        viewer {
-          repositories {
-            nodes {
-              name
-              description
-
-              url
-              homepageUrl
-              isArchived
-
-              viewerHasStarred
-              stargazers {
-                totalCount
-              }
-
-              repositoryTopics {
-                nodes {
-                  topic {
-                    name
-                  }
-                }
-              }
-            }
+  query Resume {
+    allMarkdownRemark {
+      group(field: frontmatter___category) {
+        nodes {
+          frontmatter {
+            category
+            link
+            title
           }
+          html
         }
+        fieldValue
       }
     }
   }
