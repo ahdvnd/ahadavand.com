@@ -61,7 +61,7 @@ small {
 }
 
 main {
-  margin: 1rem auto;
+  margin: 8rem auto;
   padding: 0 96px;
   width: 768 + 64px;
   html.mobile & {
@@ -100,18 +100,11 @@ main {
       flex-flow: row wrap;
 
       > li {
-        width: 100%/4;
-        html.mobile & {
-          width: 100%;
-        }
+        width: 100%;
 
-        > a {
+        > .entry {
           display: block;
-          margin-right: 16px;
-          html.mobile & {
-            margin-right: 0;
-          }
-
+          margin-right: 0;
           margin-bottom: 16px;
 
           > .title {

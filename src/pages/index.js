@@ -15,17 +15,18 @@ export default function({ data }) {
 
 export const query = graphql`
   query Resume {
-    allMarkdownRemark {
-      group(field: frontmatter___category) {
+    allMarkdownRemark(sort: { fields: fields___index }) {
+      group(field: fields___category) {
+        fieldValue
         nodes {
-          frontmatter {
-            category
-            link
+          fields {
             title
+          }
+          frontmatter {
+            link
           }
           html
         }
-        fieldValue
       }
     }
   }
