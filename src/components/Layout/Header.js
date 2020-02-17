@@ -41,32 +41,32 @@ export default function Header() {
 
       <div className="links">
         {mail && (
-          <a href="mailto:info@pravdomil.com">
+          <a href={mail}>
             <i className="fa fa-envelope" />
           </a>
         )}
         {twitter && (
-          <a href="https://twitter.com/pravdomil">
+          <a href={twitter}>
             <i className="fa fa-twitter" />
           </a>
         )}
         {github && (
-          <a href="https://github.com/pravdomil">
+          <a href={github}>
             <i className="fa fa-github" />
           </a>
         )}
         {paypal && (
-          <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BCL2X3AFQBAP2&item_name=pravdomil.com%20Beer">
+          <a href={paypal}>
             <i className="fa fa-paypal" />
           </a>
         )}
         {stackoverflow && (
-          <a href="https://stackoverflow.com/users/3748498/pravdomil">
+          <a href={stackoverflow}>
             <i className="fa fa-stack-overflow" />
           </a>
         )}
         {youtube && (
-          <a href="https://youtube.com/pravdomil">
+          <a href={youtube}>
             <i className="fa fa-youtube-play" />
           </a>
         )}
