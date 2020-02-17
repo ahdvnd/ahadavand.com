@@ -4,7 +4,7 @@ module.exports = {
     description: "Personal Website",
     siteUrl: "https://ahadavand.com",
     githubRepo: "https://github.com/ahdvnd/ahadavand.com",
-    mail: "mailto:hadavand.a@gmail.com",
+    mail: "mailto:ahadavand@minerva.kgi.edu",
     twitter: "https://twitter.com/ahdvnd",
     github: "https://github.com/ahdvnd",
     paypal:
