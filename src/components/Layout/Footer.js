@@ -1,17 +1,7 @@
 import React from "react"
 import Spacer from "../Spacer"
-import { useStaticQuery, graphql } from "gatsby"
 
 export default function Footer() {
-  const { site } = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          githubRepo
-        }
-      }
-    }
-  `)
   return (
     <footer>
       <Spacer height={16} />
